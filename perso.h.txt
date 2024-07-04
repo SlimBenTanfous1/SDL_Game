@@ -1,0 +1,72 @@
+# ifndef PERSO_H_INCLUDED
+# définir  PERSO_H_INCLUDED
+# inclure  " header.h "
+# inclure  < unistd.h >
+# inclure  < SDL/SDL.h >
+# inclure  < SDL/SDL_image.h >
+# inclure  < SDL/SDL_ttf.h >
+# inclure  < SDL/SDL_mixer.h >
+
+// Mouhamed
+ structure typedef 
+{
+	
+	
+	TTF_Font * poliscore ;
+	SDL_Surface * txtscore ;
+	SDL_Rect posscore ;
+	
+}But ;
+// /****************************************
+ structure typedef  
+{
+	
+	SDL_Surface * imvie[ 4 ];
+	SDL_Rect posvie ;
+	int           nmbr_vie;
+	
+}vie ;
+
+// **************************
+
+
+/* *
+* @structpersonnage
+* Structure @brief pour personne
+*/
+
+
+ structure typedef 
+    {
+    
+	SDL_Surface * image[ 3 ][ 3 ],*image1;  /* !< Surface */
+	SDL_Rect pos_p ;           /* !< Rectangle */
+	
+	vie vie_perso ;
+	score score_perso ;
+	
+	int         mvtx, mvty, accélérateur, super_jump ;  // / mvtx = déplacement | mvty = saut
+	état int         , gravité ;       // / etat 1 en mvmnt 0 stable
+	sens int         , num, haut ; // / direc : 0 droite 1 gauche 2 attq "ligne"  
+                                 // /num : numéro de l'image "colone"
+        int         stop ;
+     }personne ;
+     
+
+// perso_p tache :med
+
+void initPerso(Personne *p)
+void afficherPerso(Personne p, SDL_Surface * screen)
+void deplacerPerso (Personne *p, , int dt)
+void animerPerso (Personne* p)
+void saut (Personne* p)
+
+
+// ------------------------------------------------ -------
+
+
+
+
+
+
+# endif  //   #include "en-tête.h"
